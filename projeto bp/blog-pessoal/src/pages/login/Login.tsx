@@ -6,7 +6,7 @@ import { login } from '../../services/Service';
 import UserLogin from '../../models/UserLogin';
 import './Login.css';
 
-function Login(): JSX.Element {
+function Login() {
     let history = useHistory();
     const [token, setToken] = useLocalStorage('token');
     const [userLogin, setUserLogin] = useState<UserLogin>(
