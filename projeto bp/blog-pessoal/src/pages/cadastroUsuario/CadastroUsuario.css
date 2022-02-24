@@ -1,5 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap');
+
 .imagem2{
-    background-image: url(https://i.imgur.com/d5bMdDJ.jpg);
+    background-image: url(https://imgur.com/BTtpiqV.jpg);
     background-repeat: no-repeat;
     width: 100vh;
     min-height: 100vh;
@@ -9,8 +11,31 @@
 
 .textos2{
     font-weight: bold !important;
+    color: white !important;
+    font-family: 'UnifrakturMaguntia', cursive !important;
+}
+
+.btnCadastrar{
+    margin-left: 20px !important;
+    font-weight: bold !important;
 }
 
 .btnCancelar{
-    margin-right: 20px !important;
+    margin-left: 20px !important;
+    background-color: #EBEBEB !important;
+    color: #CB6CE6 !important;
+    font-weight: bold !important;
 }
+
+.color1{
+    background-color: plum;
+}
+
+.TxtFColor{
+    width: 450px;
+    margin-left: 64px !important;
+    background: rgba(232, 173, 240, 0.781);
+    outline: none;
+    border: none;
+}
+

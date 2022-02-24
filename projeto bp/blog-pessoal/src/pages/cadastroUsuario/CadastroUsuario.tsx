@@ -1,11 +1,10 @@
-import React , {useState, useEffect, ChangeEvent } from 'react';
-import { useHistory } from 'react-router-dom';
+import { Box, Button, Grid, TextField, Typography } from '@material-ui/core';
+import React, { ChangeEvent, useEffect, useState } from 'react';
+import { Link, useHistory } from 'react-router-dom';
+import { toast } from 'react-toastify';
 import User from '../../models/User';
 import { cadastroUsuario } from '../../services/Service';
-import { Grid, Box, Typography, Button, TextField } from '@material-ui/core';
-import { Link } from 'react-router-dom';
 import './CadastroUsuario.css';
-import { toast } from 'react-toastify';
 
 function CadastroUsuario() {
 
@@ -28,10 +27,11 @@ function CadastroUsuario() {
         })
 
     useEffect(() => {
+        // eslint-disable-next-line eqeqeq
         if (userResult.id != 0) {
             history.push("/login")
         }
-    }, [userResult])
+    }, [history, userResult])
 
 
     function confirmarSenhaHandle(e: ChangeEvent<HTMLInputElement>){
@@ -49,6 +49,7 @@ function CadastroUsuario() {
     }
     async function onSubmit(e: ChangeEvent<HTMLFormElement>) {
         e.preventDefault()
+        // eslint-disable-next-line eqeqeq
         if(confirmarSenha == user.senha){
         cadastroUsuario(`/usuarios/cadastrar`, user, setUserResult)
         toast.success('Usuario cadastrado com sucesso', {
@@ -75,23 +76,23 @@ function CadastroUsuario() {
         }
     }
     return (
-        <Grid container direction='row' justifyContent='center' alignItems='center'>
+        <Grid container className='color1' direction='row' justifyContent='center' alignItems='center'>
             <Grid item xs={6} className='imagem2'></Grid>
-            <Grid item xs={6} alignItems='center'>
+            <Grid item xs={6}>
                 <Box paddingX={10}>
                     <form onSubmit={onSubmit}>
-                        <Typography variant='h3' gutterBottom color='textPrimary' component='h3' align='center' className='textos2'>Cadastrar</Typography>
-                        <TextField value={user.nome} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='nome' label='nome' variant='outlined' name='nome' margin='normal' fullWidth />
-                        <TextField value={user.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}id='usuario' label='usuario' variant='outlined' name='usuario' margin='normal'fullWidth />
-                        <TextField value={user.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}id='senha' label='senha' variant='outlined' name='senha' margin='normal' type='password' fullWidth />
-                        <TextField value={confirmarSenha} onChange={(e: ChangeEvent<HTMLInputElement>) => confirmarSenhaHandle(e)}id='confirmarSenha' label='confirmarSenha' variant='outlined' name='confirmarSenha' margin='normal' type='password' fullWidth />
+                        <Typography variant='h3' gutterBottom color='textPrimary' component='h3' className='textos2' align='center' >Cadastre-se</Typography>
+                        <TextField value={user.nome} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)} id='nome' label='nome' variant='outlined' name='nome' margin='normal' className='TxtFColor'/>
+                        <TextField value={user.usuario} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}id='usuario' label='email' variant='outlined' name='usuario' margin='normal' className='TxtFColor'/>
+                        <TextField value={user.senha} onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}id='senha' label='senha' variant='outlined' name='senha' margin='normal' type='password' className='TxtFColor'/>
+                        <TextField value={confirmarSenha} onChange={(e: ChangeEvent<HTMLInputElement>) => confirmarSenhaHandle(e)}id='confirmarSenha' label='confirmarSenha' variant='outlined' name='confirmarSenha' margin='normal' type='password' className='TxtFColor'/>
                         <Box marginTop={2} textAlign='center'>
-                            <Link to='/login' className='text-decorator-none'>
+                        <Link to='/login' className='text-decorator-none'>
                                 <Button variant='contained' color='secondary' className='btnCancelar'>
                                     Cancelar
                                 </Button>
                             </Link>
-                            <Button type='submit' variant='contained' color='primary'>
+                            <Button type='submit' variant='contained' color='primary' className='btnCadastrar' style={{backgroundColor: "#CB6CE6"}}>
                                     Cadastrar
                             </Button>
                         </Box>
