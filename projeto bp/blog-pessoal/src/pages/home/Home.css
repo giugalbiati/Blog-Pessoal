@@ -1,16 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Peddana&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kumar+One+Outline&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+
 .caixa{
-    background-color: #3F51B5;
+    background-color: rgba(140, 54, 151, 0.788);
 }
 
 .titulo{
    color: white !important;
    font-weight: bold !important;
+   font-family: 'UnifrakturMaguntia', cursive !important;
+}
+
+.textos{
+    color: white !important;
+    font-family: 'Roboto Slab', serif !important;
 }
 
 .botao{
     border-color: white !important;
-    background-color: #3F51B5;
+    background-color: rgba(140, 54, 151, 0.788) !important;
     color: white !important;
+    font-weight: bold !important;
+}
+
+.botao2{
+    font-weight:bold !important;
+    color:#CB6CE6 !important; 
 }
 
 .postagens{
@@ -19,4 +36,8 @@
 
 .text-decorator-none{
     text-decoration: none;
+}
+
+.mgtop{
+    margin-top: 3rem !important;
 }

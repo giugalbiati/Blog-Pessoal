@@ -37,10 +37,10 @@ function Home() {
             <Grid container direction="row" justifyContent="center" alignItems="center" className='caixa'>
                 <Grid alignItems="center" item xs={6}>
                     <Box paddingX={20} >
-                        <Typography variant="h3" gutterBottom color="textPrimary" component="h3" align="center" className='titulo'>Seja bem vindo(a)!</Typography>
-                        <Typography variant="h5" gutterBottom color="textPrimary" component="h5" align="center" className='titulo'>expresse aqui os seus pensamentos e opiniões!</Typography>
+                        <Typography variant="h3" gutterBottom color="textPrimary" component="h3" align="center" className='titulo'>Seja Bem Vinde!</Typography>
+                        <Typography variant="h5" gutterBottom color="textPrimary" component="h5" align="center" className='textos'>registre aqui suas vivências e pensamentos relativos a parques de diversão.</Typography>
                     </Box>
-                    <Box display="flex" justifyContent="center">
+                    <Box display="flex" justifyContent="center" marginTop={4}>
                         <Box marginRight={1}>
                             <ModalPostagem />
                         </Box>
@@ -49,8 +49,8 @@ function Home() {
                         </Link>
                     </Box>
                 </Grid>
-                <Grid item xs={6} >
-                    <img src="https://imgur.com/kACMNCJ.png" alt="" width="500px" height="500px" />
+                <Grid item xs={6} className='mgtop' >
+                    <img src="https://imgur.com/kACMNCJ.png" alt="" width="650px" height="450px"/>
                 </Grid>
                 <Grid xs={12} className='postagens'>
                     <TabPostagem />

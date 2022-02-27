@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Peddana&display=swap');
+
 .cursor{
     cursor: pointer;
     color: white;
@@ -5,4 +8,40 @@
 
 .text-decorator-none{
     text-decoration: none;
+}
+
+.bpTitulo{
+    font-family: 'UnifrakturMaguntia', cursive !important;
+    margin-left: 2rem !important;
+}
+
+.bpTexto{
+    font-family: 'Peddana', serif !important;
+    font-size: 30px !important;
+    font-weight: bold !important;
+}
+
+.backgroundNB{
+    background-color: plum;
+}
+
+.displayitens{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.gap{
+    gap:20px;
+}
+
+.marginlft{
+    margin-left: 4rem !important;
+}
+
+.FEl{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 47.5rem !important;
 }
