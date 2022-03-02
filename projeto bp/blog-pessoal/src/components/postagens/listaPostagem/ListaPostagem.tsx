@@ -54,16 +54,16 @@ function ListaPostagem() {
           <Box m={2} >
             <Card variant="outlined">
               <CardContent>
-                <Typography color="textSecondary" gutterBottom>
-                  Postagens
+                <Typography color="textSecondary" gutterBottom className='fcpost'>
+                  Post
                 </Typography>
-                <Typography variant="h5" component="h2">
+                <Typography variant="h5" component="h2" className='textos1'>
                   {post.titulo}
                 </Typography>
-                <Typography variant="body2" component="p">
+                <Typography variant="body2" component="p" className='textos1'>
                   {post.texto}
                 </Typography>
-                <Typography variant="body2" component="p">
+                <Typography variant="body2" component="p" className='textos1'>
                   {post.tema?.descricao}
                 </Typography>
               </CardContent>
@@ -72,14 +72,14 @@ function ListaPostagem() {
 
                   <Link to={`/formularioPostagem/${post.id}`} className="text-decorator-none" >
                     <Box mx={1}>
-                      <Button variant="contained" className="marginLeft" size='small' color="primary" >
+                      <Button variant="contained" className="marginLeft" size='small'>
                         atualizar
                       </Button>
                     </Box>
                   </Link>
                   <Link to={`/deletarPostagem/${post.id}`} className="text-decorator-none">
                     <Box mx={1}>
-                      <Button variant="contained" size='small' color="secondary">
+                      <Button variant="contained" size='small'>
                         deletar
                       </Button>
                     </Box>
